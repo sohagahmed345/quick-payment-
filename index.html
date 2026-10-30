@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quick Payment</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f2f6ff;color:#172554}
+header{background:#0756bd;color:white;padding:22px;text-align:center}
+main{max-width:650px;margin:25px auto;padding:16px}
+.card{background:white;padding:20px;border-radius:16px;margin-bottom:16px;box-shadow:0 4px 15px #0001}
+h2{color:#0756bd}
+button{background:#0756bd;color:white;border:0;border-radius:10px;padding:13px;width:100%;font-size:17px}
+input,select{width:100%;padding:13px;margin:8px 0 15px;border:1px solid #ccd5e5;border-radius:9px;font-size:16px}
+.price{font-size:24px;font-weight:bold;color:#0756bd}
+</style>
+</head>
+<body>
+<header>
+<h1>Quick Payment</h1>
+<p>সহজ, নিরাপদ অনলাইন শপিং</p>
+</header>
+<main>
+<div class="card">
+<h2>আমাদের পণ্য</h2>
+<h3>Demo Product</h3>
+<p>আপনার পছন্দের পণ্যটি অর্ডার করুন।</p>
+<p class="price">৳ 100</p>
+</div>
+<div class="card">
+<h2>অর্ডার তথ্য</h2>
+<form id="order">
+<label>আপনার নাম</label>
+<input required placeholder="সম্পূর্ণ নাম">
+<label>মোবাইল নম্বর</label>
+<input required type="tel" placeholder="01XXXXXXXXX">
+<label>ডেলিভারি ঠিকানা</label>
+<input required placeholder="সম্পূর্ণ ঠিকানা">
+<label>পণ্যের সাইজ</label>
+<select><option>সাইজ নির্বাচন করুন</option><option>M</option><option>L</option><option>XL</option></select>
+<label>পেমেন্ট পদ্ধতি</label>
+<select id="payment">
+<option>bKash</option>
+<option>Nagad</option>
+<option>Rocket</option>
+<option>Card</option>
+</select>
+<p>মোট মূল্য: <strong>৳100</strong></p>
+<button type="submit">অর্ডার করুন</button>
+</form>
+<p id="message"></p>
+</div>
+</main>
+<script>
+document.getElementById('order').addEventListener('submit',function(e){
+e.preventDefault();
+document.getElementById('message').textContent=
+'ডেমো অর্ডার গ্রহণ করা হয়েছে। এটি আসল পেমেন্ট নয়।';
+});
+</script>
+</body>
+                                                           </html>
